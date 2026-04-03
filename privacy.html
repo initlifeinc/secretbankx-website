@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-page-title-key="privacy.page_title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 — SecretBankX</title>
+  <meta name="description" data-i18n-content="privacy.meta_desc" content="" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="i18n/zh.js"></script>
+  <script src="i18n/en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script>I18n.init();</script>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <div class="navbar__brand-dot">🔐</div>
+        <span id="nav-brand">SecretBankX</span>
+      </a>
+      <button class="navbar__toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="index.html#features" data-i18n="nav.features">功能</a></li>
+        <li><a href="terms.html" data-i18n="nav.terms">服务条款</a></li>
+        <li><a href="careers.html" data-i18n="nav.careers">加入我们</a></li>
+        <li>
+          <div class="lang-switcher" id="lang-switcher">
+            <button class="lang-switcher__btn" onclick="toggleLangMenu(event)">
+              <span id="lang-label">中文</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10L6 8z"/></svg>
+            </button>
+            <ul class="lang-switcher__menu" id="lang-menu">
+              <li><button data-lang-btn="zh" onclick="setLang('zh')">中文</button></li>
+              <li><button data-lang-btn="en" onclick="setLang('en')">English</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#download" class="navbar__cta" data-i18n="nav.download">下载</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Content ────────────────────────────────────────────── -->
+<main class="doc-page">
+  <div class="container container--narrow">
+
+    <div class="doc-page__header">
+      <h1 data-i18n="privacy.h1">隐私政策</h1>
+      <p class="doc-page__meta">
+        <span data-i18n="privacy.label_effective">生效日期：</span><span data-i18n="privacy.effective_date"></span>
+        &nbsp;·&nbsp;
+        <span data-i18n="privacy.label_updated">最后更新：</span><span data-i18n="privacy.updated_date"></span>
+      </p>
+    </div>
+
+    <div class="doc-body">
+
+      <div class="doc-highlight">
+        <p data-i18n-html="privacy.highlight"></p>
+      </div>
+
+      <h2 data-i18n="privacy.s1_title">1. 概述</h2>
+      <p data-i18n="privacy.s1_p1"></p>
+
+      <h2 data-i18n="privacy.s2_title">2. 我们收集的信息</h2>
+
+      <h3 data-i18n="privacy.s2_1_title">2.1 我们不收集的信息</h3>
+      <p data-i18n="privacy.s2_1_p1"></p>
+      <ul id="s2-1-list"></ul>
+
+      <h3 data-i18n="privacy.s2_2_title">2.2 App 本身可能处理的信息</h3>
+      <p data-i18n="privacy.s2_2_p1"></p>
+      <ul id="s2-2-list"></ul>
+
+      <h3 data-i18n="privacy.s2_3_title">2.3 通过 App Store 分发收集的信息</h3>
+      <p data-i18n="privacy.s2_3_p1"></p>
+
+      <h3 data-i18n="privacy.s2_4_title">2.4 你主动联系我们时</h3>
+      <p data-i18n="privacy.s2_4_p1"></p>
+
+      <h2 data-i18n="privacy.s3_title">3. 数据存储与安全</h2>
+      <p data-i18n="privacy.s3_p1"></p>
+      <ul id="s3-list"></ul>
+      <p data-i18n="privacy.s3_p2"></p>
+
+      <h2 data-i18n="privacy.s4_title">4. 数据共享</h2>
+      <p data-i18n="privacy.s4_p1"></p>
+      <p data-i18n="privacy.s4_p2"></p>
+
+      <h2 data-i18n="privacy.s5_title">5. 儿童隐私</h2>
+      <p data-i18n="privacy.s5_p1"></p>
+
+      <h2 data-i18n="privacy.s6_title">6. 第三方服务</h2>
+      <p data-i18n="privacy.s6_p1"></p>
+      <p data-i18n="privacy.s6_p2"></p>
+
+      <h2 data-i18n="privacy.s7_title">7. 你的权利</h2>
+      <p data-i18n="privacy.s7_p1"></p>
+      <ul id="s7-list"></ul>
+      <p id="s7-p2"></p>
+
+      <h2 data-i18n="privacy.s8_title">8. 本政策的变更</h2>
+      <p data-i18n="privacy.s8_p1"></p>
+
+      <h2 data-i18n="privacy.s9_title">9. 联系我们</h2>
+      <p data-i18n="privacy.s9_p1"></p>
+      <ul>
+        <li><span data-i18n="privacy.s9_list_email">邮件：</span><a href="#" id="privacy-email-link"></a></li>
+        <li id="s9-dev"></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span>🔐</span>
+        <span id="footer-brand">SecretBankX</span>
+        <span style="color:var(--text-3);font-weight:400;" id="footer-copyright"></span>
+      </div>
+      <nav class="footer__links">
+        <a href="index.html"   data-i18n="footer.home">首页</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+        <a href="terms.html"   data-i18n="footer.terms">服务条款</a>
+        <a href="careers.html" data-i18n="footer.careers">加入我们</a>
+        <a href="#" id="footer-contact" data-i18n="footer.contact">联系我们</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+function toggleLangMenu(e) { e.stopPropagation(); document.getElementById('lang-switcher').classList.toggle('open'); }
+document.addEventListener('click', function() { var s=document.getElementById('lang-switcher'); if(s) s.classList.remove('open'); });
+
+I18n.applyDOM();
+I18n.updateSwitcher();
+
+(function() {
+  var c   = SBX_CONFIG;
+  var cfg = { company: c.COMPANY_NAME_FULL || c.COMPANY_NAME, privacy_email: c.PRIVACY_EMAIL || c.CONTACT_EMAIL };
+
+  // Lang label
+  var labels = {zh:'中文', en:'English'};
+  var ll = document.getElementById('lang-label');
+  if (ll) ll.textContent = labels[I18n.locale] || I18n.locale;
+
+  // Brand
+  document.getElementById('nav-brand').textContent = c.APP_NAME;
+  document.getElementById('footer-brand').textContent = c.APP_NAME;
+
+  // Copyright
+  var yr = new Date().getFullYear(), sy = c.COPYRIGHT_YEAR;
+  document.getElementById('footer-copyright').innerHTML = '&nbsp;·&nbsp;© ' + (String(sy)===String(yr)?yr:sy+'–'+yr) + ' ' + c.COMPANY_NAME;
+  document.getElementById('footer-contact').href = 'mailto:' + c.CONTACT_EMAIL;
+
+  // Interpolate paragraphs that contain {{placeholders}}
+  function applyVars(selector) {
+    document.querySelectorAll(selector).forEach(function(el) {
+      el.textContent = el.textContent
+        .replace(/\{\{company\}\}/g, cfg.company)
+        .replace(/\{\{privacy_email\}\}/g, cfg.privacy_email);
+    });
+  }
+  applyVars('[data-i18n]');
+
+  // Email link
+  var emailLink = document.getElementById('privacy-email-link');
+  if (emailLink) { emailLink.href = 'mailto:' + cfg.privacy_email; emailLink.textContent = cfg.privacy_email; }
+
+  // s7 p2 with email link
+  var s7p2 = document.getElementById('s7-p2');
+  if (s7p2) {
+    var raw = I18n.t('privacy.s7_p2', cfg);
+    // replace email placeholder with anchor
+    s7p2.innerHTML = raw.replace(cfg.privacy_email, '<a href="mailto:' + cfg.privacy_email + '">' + cfg.privacy_email + '</a>');
+  }
+
+  // Developer list item
+  var s9dev = document.getElementById('s9-dev');
+  if (s9dev) s9dev.textContent = (I18n.t('privacy.s9_list_dev') || '').replace(/\{\{company\}\}/g, cfg.company);
+
+  // Render HTML lists
+  function renderList(id, key) {
+    var ul = document.getElementById(id);
+    if (!ul) return;
+    var items = I18n.t(key) || [];
+    items.forEach(function(item) {
+      var li = document.createElement('li');
+      li.innerHTML = item;
+      ul.appendChild(li);
+    });
+  }
+  renderList('s2-1-list', 'privacy.s2_1_list');
+  renderList('s2-2-list', 'privacy.s2_2_list');
+  renderList('s3-list',   'privacy.s3_list');
+  renderList('s7-list',   'privacy.s7_list');
+})();
+</script>
+</body>
+</html>

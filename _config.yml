@@ -1,0 +1,7 @@
+# GitHub Pages 配置
+# 使用默认主题（实际上我们是纯静态 HTML，这个文件主要用于告知 GitHub Pages 入口）
+title: SecretBankX
+description: 本地优先的零知识密码管理器
+
+# 不使用 Jekyll 主题，直接使用我们的 HTML
+theme: null

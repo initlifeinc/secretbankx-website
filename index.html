@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-page-title-key="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecretBankX</title>
+  <meta name="description" data-i18n-content="home.hero_desc" content="" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="i18n/zh.js"></script>
+  <script src="i18n/en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script>I18n.init();</script>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <div class="navbar__brand-dot">🔐</div>
+        <span id="nav-brand">SecretBankX</span>
+      </a>
+      <button class="navbar__toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="#features" data-i18n="nav.features">功能</a></li>
+        <li><a href="#security" data-i18n="nav.security">安全</a></li>
+        <li><a href="privacy.html" data-i18n="nav.privacy">隐私政策</a></li>
+        <li><a href="terms.html" data-i18n="nav.terms">服务条款</a></li>
+        <li><a href="careers.html" data-i18n="nav.careers">加入我们</a></li>
+        <li>
+          <div class="lang-switcher" id="lang-switcher">
+            <button class="lang-switcher__btn" onclick="toggleLangMenu(event)">
+              <span id="lang-label">中文</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10L6 8z"/></svg>
+            </button>
+            <ul class="lang-switcher__menu" id="lang-menu">
+              <li><button data-lang-btn="zh" onclick="setLang('zh')">中文</button></li>
+              <li><button data-lang-btn="en" onclick="setLang('en')">English</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#download" class="navbar__cta" data-i18n="nav.download">下载</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__badge" data-i18n="home.hero_badge">本地优先 · 零知识 · 完全离线</div>
+    <div class="hero__icon-placeholder">🔐</div>
+    <h1 class="hero__title">
+      <span data-i18n="home.hero_title_main">你的秘密，</span>
+      <span class="gradient" data-i18n="home.hero_title_gradient">只属于你</span>
+    </h1>
+    <p class="hero__desc" data-i18n="home.hero_desc"></p>
+    <div class="hero__actions">
+      <a href="#" class="btn btn--primary" id="btn-appstore">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span data-i18n="home.btn_appstore">App Store 下载</span>
+      </a>
+      <a href="#" class="btn btn--secondary" id="btn-github">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+        <span data-i18n="home.btn_github">GitHub</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Features ────────────────────────────────────────────── -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__label" data-i18n="home.features_label">功能特性</span>
+      <h2 class="section-header__title" data-i18n="home.features_title">为什么选择 SecretBankX？</h2>
+      <p class="section-header__desc" data-i18n="home.features_desc"></p>
+    </div>
+    <div class="features-grid" id="features-grid"></div>
+  </div>
+</section>
+
+<!-- ── Security ────────────────────────────────────────────── -->
+<section class="section security-section" id="security">
+  <div class="container">
+    <div class="security-grid">
+      <div class="security-grid__text">
+        <span class="section-header__label" data-i18n="home.security_label">安全架构</span>
+        <h2 id="security-title">密码学级别的信任，<br>从不妥协</h2>
+        <p data-i18n="home.security_p1"></p>
+        <p data-i18n="home.security_p2"></p>
+        <ul class="security-list" id="security-list"></ul>
+      </div>
+      <div class="security-visual" aria-hidden="true">
+<span class="comment">// Vault unlock flow (simplified)</span>
+
+<span class="key">func</span> <span class="symbol">unlock</span>(<span class="key">password</span>: <span class="value">String</span>) {
+  <span class="comment">// 1. PBKDF2 key derivation</span>
+  <span class="key">let</span> derivedKey = <span class="symbol">pbkdf2</span>(
+    password, salt, iterations: <span class="value">100_000</span>
+  )
+
+  <span class="comment">// 2. Decrypt dataEncryptKey</span>
+  <span class="key">let</span> dek = <span class="symbol">aesDecrypt</span>(
+    encryptedDEK, key: derivedKey
+  )
+
+  <span class="comment">// 3. Open SQLCipher Vault</span>
+  <span class="symbol">vault</span>.<span class="symbol">open</span>(key: dek)
+
+  <span class="comment">// ✓ Master password never stored</span>
+  <span class="comment">// ✓ DEK lives in memory only</span>
+}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Platforms ───────────────────────────────────────────── -->
+<section class="section" id="platforms">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__label" data-i18n="home.platforms_label">全平台支持</span>
+      <h2 class="section-header__title" data-i18n="home.platforms_title">一套代码，原生三端</h2>
+      <p class="section-header__desc" data-i18n="home.platforms_desc"></p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;max-width:700px;margin:0 auto;">
+      <div class="feature-card" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:10px;">📱</div>
+        <div class="feature-card__title" data-i18n="home.platform_iphone">iPhone</div>
+        <div class="feature-card__desc" id="platform-iphone-sub"></div>
+      </div>
+      <div class="feature-card" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:10px;">⬛</div>
+        <div class="feature-card__title" data-i18n="home.platform_ipad">iPad</div>
+        <div class="feature-card__desc" id="platform-ipad-sub"></div>
+      </div>
+      <div class="feature-card" style="text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:10px;">💻</div>
+        <div class="feature-card__title" data-i18n="home.platform_mac">Mac</div>
+        <div class="feature-card__desc" id="platform-mac-sub"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────── -->
+<section class="section" id="download">
+  <div class="container">
+    <div class="cta-banner">
+      <h2 data-i18n="home.cta_title">准备好掌控你的数字安全了吗？</h2>
+      <p data-i18n="home.cta_desc">免费下载，一次买断，永久拥有。</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="#" class="btn btn--primary" id="cta-appstore">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span data-i18n="home.btn_appstore">App Store 下载</span>
+        </a>
+        <a href="#" class="btn btn--ghost" id="cta-testflight" style="display:none;">
+          <span data-i18n="home.btn_testflight">TestFlight 内测</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span>🔐</span>
+        <span id="footer-brand">SecretBankX</span>
+        <span style="color:var(--text-3);font-weight:400;" id="footer-copyright"></span>
+      </div>
+      <nav class="footer__links">
+        <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+        <a href="terms.html" data-i18n="footer.terms">服务条款</a>
+        <a href="careers.html" data-i18n="footer.careers">加入我们</a>
+        <a href="#" id="footer-github" data-i18n="footer.github">GitHub</a>
+        <a href="#" id="footer-contact" data-i18n="footer.contact">联系我们</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav
+function toggleMobileMenu() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+// Lang dropdown
+function toggleLangMenu(e) {
+  e.stopPropagation();
+  document.getElementById('lang-switcher').classList.toggle('open');
+}
+document.addEventListener('click', function() {
+  var s = document.getElementById('lang-switcher');
+  if (s) s.classList.remove('open');
+});
+
+// Apply i18n to DOM
+I18n.applyDOM();
+I18n.updateSwitcher();
+
+// Lang switcher label
+(function() {
+  var labels = { zh: '中文', en: 'English' };
+  var el = document.getElementById('lang-label');
+  if (el) el.textContent = labels[I18n.locale] || I18n.locale;
+})();
+
+// Config-driven content
+(function() {
+  var c = SBX_CONFIG;
+
+  // Brand & title
+  document.getElementById('nav-brand').textContent = c.APP_NAME;
+  document.getElementById('footer-brand').textContent = c.APP_NAME;
+  document.title = c.APP_NAME + ' — ' + I18n.t('home.hero_title_main') + I18n.t('home.hero_title_gradient');
+
+  // Copyright
+  var yr = new Date().getFullYear();
+  var startYr = c.COPYRIGHT_YEAR;
+  var yrStr = String(startYr) === String(yr) ? yr : startYr + '–' + yr;
+  document.getElementById('footer-copyright').innerHTML = '&nbsp;·&nbsp;© ' + yrStr + ' ' + c.COMPANY_NAME;
+
+  // Links
+  function setLink(id, url) {
+    var el = document.getElementById(id);
+    if (el && url) el.href = url;
+  }
+  setLink('btn-github', c.GITHUB_URL);
+  setLink('footer-github', c.GITHUB_URL);
+  document.getElementById('footer-contact').href = 'mailto:' + c.CONTACT_EMAIL;
+
+  if (c.APP_STORE_URL) {
+    setLink('btn-appstore', c.APP_STORE_URL);
+    setLink('cta-appstore', c.APP_STORE_URL);
+  } else {
+    ['btn-appstore','cta-appstore'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) { el.style.opacity='0.45'; el.style.pointerEvents='none'; el.title=I18n.t('home.btn_appstore_soon'); }
+    });
+  }
+  if (c.TESTFLIGHT_URL) {
+    var tf = document.getElementById('cta-testflight');
+    if (tf) { tf.style.display=''; tf.href = c.TESTFLIGHT_URL; }
+  }
+
+  // Platform sub-text (newline → <br>)
+  function setMultiline(id, key) {
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = (I18n.t(key) || '').replace(/\n/g, '<br>');
+  }
+  setMultiline('platform-iphone-sub', 'home.platform_iphone_sub');
+  setMultiline('platform-ipad-sub',   'home.platform_ipad_sub');
+  setMultiline('platform-mac-sub',    'home.platform_mac_sub');
+
+  // Security title (newline → <br>)
+  var secTitle = document.getElementById('security-title');
+  if (secTitle) secTitle.innerHTML = (I18n.t('home.security_title') || '').replace(/\n/g, '<br>');
+
+  // Security list
+  var secList = document.getElementById('security-list');
+  if (secList) {
+    var items = I18n.t('home.security_list') || [];
+    items.forEach(function(item) {
+      var li = document.createElement('li');
+      li.textContent = item;
+      secList.appendChild(li);
+    });
+  }
+
+  // Features grid
+  var grid = document.getElementById('features-grid');
+  if (grid) {
+    var features = I18n.t('home.features_items') || [];
+    features.forEach(function(f) {
+      var card = document.createElement('div');
+      card.className = 'feature-card';
+      card.innerHTML =
+        '<div class="feature-card__icon">' + f.icon + '</div>' +
+        '<div class="feature-card__title">' + f.title + '</div>' +
+        '<div class="feature-card__desc">' + f.desc + '</div>';
+      grid.appendChild(card);
+    });
+  }
+})();
+</script>
+</body>
+</html>

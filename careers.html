@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-page-title-key="careers.page_title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>加入我们 — SecretBankX</title>
+  <meta name="description" data-i18n-content="careers.meta_desc" content="" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="i18n/zh.js"></script>
+  <script src="i18n/en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script>I18n.init();</script>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <div class="navbar__brand-dot">🔐</div>
+        <span id="nav-brand">SecretBankX</span>
+      </a>
+      <button class="navbar__toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="index.html#features" data-i18n="nav.features">功能</a></li>
+        <li><a href="privacy.html" data-i18n="nav.privacy">隐私政策</a></li>
+        <li><a href="terms.html" data-i18n="nav.terms">服务条款</a></li>
+        <li>
+          <div class="lang-switcher" id="lang-switcher">
+            <button class="lang-switcher__btn" onclick="toggleLangMenu(event)">
+              <span id="lang-label">中文</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10L6 8z"/></svg>
+            </button>
+            <ul class="lang-switcher__menu" id="lang-menu">
+              <li><button data-lang-btn="zh" onclick="setLang('zh')">中文</button></li>
+              <li><button data-lang-btn="en" onclick="setLang('en')">English</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#download" class="navbar__cta" data-i18n="nav.download">下载</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────── -->
+<section class="careers-hero">
+  <div class="container">
+    <div class="hero__badge" data-i18n="careers.hero_badge">我们正在成长</div>
+    <h1>
+      <span data-i18n="careers.hero_title_1">与我们一起，</span><br>
+      <span style="background:linear-gradient(135deg,#93C5FD,#C4B5FD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;" data-i18n="careers.hero_title_2">重新定义数字隐私</span>
+    </h1>
+    <p data-i18n="careers.hero_desc"></p>
+  </div>
+</section>
+
+<!-- ── Values ─────────────────────────────────────────────── -->
+<section class="section--sm">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__label" data-i18n="careers.values_label">我们的价值观</span>
+      <h2 class="section-header__title" data-i18n="careers.values_title">我们如何工作</h2>
+    </div>
+    <div class="values-grid" id="values-grid"></div>
+  </div>
+</section>
+
+<!-- ── Positions ───────────────────────────────────────────── -->
+<section class="section--sm">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__label" data-i18n="careers.positions_label">开放职位</span>
+      <h2 class="section-header__title" data-i18n="careers.positions_title">当前招聘</h2>
+    </div>
+
+    <div class="positions-list" id="positions-list"></div>
+
+    <div id="no-positions" style="display:none;">
+      <div class="no-positions">
+        <div class="no-positions__emoji">👀</div>
+        <h3 data-i18n="careers.no_pos_title">暂无开放职位</h3>
+        <p data-i18n="careers.no_pos_desc"></p>
+        <a href="#" class="btn btn--primary" id="contact-btn" data-i18n="careers.no_pos_btn">发送邮件</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Open Application ────────────────────────────────────── -->
+<section class="section--sm" style="padding-bottom:80px;">
+  <div class="container">
+    <div style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-l);padding:40px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(59,130,246,0.08),transparent 60%);pointer-events:none;"></div>
+      <div style="font-size:2rem;margin-bottom:14px;">✉️</div>
+      <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:10px;" data-i18n="careers.open_title">没有看到合适的职位？</h3>
+      <p style="color:var(--text-2);max-width:420px;margin:0 auto 24px;font-size:0.95rem;line-height:1.7;" data-i18n="careers.open_desc"></p>
+      <a href="#" class="btn btn--primary" id="open-apply-btn" data-i18n="careers.open_btn">主动投递简历</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span>🔐</span>
+        <span id="footer-brand">SecretBankX</span>
+        <span style="color:var(--text-3);font-weight:400;" id="footer-copyright"></span>
+      </div>
+      <nav class="footer__links">
+        <a href="index.html"   data-i18n="footer.home">首页</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+        <a href="terms.html"   data-i18n="footer.terms">服务条款</a>
+        <a href="careers.html" data-i18n="footer.careers">加入我们</a>
+        <a href="#" id="footer-contact" data-i18n="footer.contact">联系我们</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+function toggleLangMenu(e) { e.stopPropagation(); document.getElementById('lang-switcher').classList.toggle('open'); }
+document.addEventListener('click', function() { var s=document.getElementById('lang-switcher'); if(s) s.classList.remove('open'); });
+
+I18n.applyDOM();
+I18n.updateSwitcher();
+
+(function() {
+  var c = SBX_CONFIG;
+
+  // Lang label
+  var labels = {zh:'中文', en:'English'};
+  var ll = document.getElementById('lang-label');
+  if (ll) ll.textContent = labels[I18n.locale] || I18n.locale;
+
+  // Brand / copyright
+  document.getElementById('nav-brand').textContent = c.APP_NAME;
+  document.getElementById('footer-brand').textContent = c.APP_NAME;
+  var yr = new Date().getFullYear(), sy = c.COPYRIGHT_YEAR;
+  document.getElementById('footer-copyright').innerHTML = '&nbsp;·&nbsp;© ' + (String(sy)===String(yr)?yr:sy+'–'+yr) + ' ' + c.COMPANY_NAME;
+  document.getElementById('footer-contact').href = 'mailto:' + c.CONTACT_EMAIL;
+
+  // Apply buttons
+  var openApply = document.getElementById('open-apply-btn');
+  if (openApply) openApply.href = 'mailto:' + c.JOBS_EMAIL + '?subject=' + encodeURIComponent(I18n.t('careers.open_subject') + c.APP_NAME);
+  var contactBtn = document.getElementById('contact-btn');
+  if (contactBtn) contactBtn.href = 'mailto:' + c.JOBS_EMAIL;
+
+  // Values grid
+  var vg = document.getElementById('values-grid');
+  (I18n.t('careers.values') || []).forEach(function(v) {
+    var card = document.createElement('div');
+    card.className = 'value-card';
+    card.innerHTML =
+      '<div class="value-card__icon">' + v.icon + '</div>' +
+      '<div class="value-card__title">' + v.title + '</div>' +
+      '<div class="value-card__desc">' + v.desc + '</div>';
+    vg.appendChild(card);
+  });
+
+  // Open positions
+  var positions = c.OPEN_POSITIONS || [];
+  var list = document.getElementById('positions-list');
+  var noPos = document.getElementById('no-positions');
+
+  if (positions.length === 0) {
+    list.style.display = 'none';
+    noPos.style.display = 'block';
+  } else {
+    positions.forEach(function(p) {
+      var card = document.createElement('div');
+      card.className = 'position-card';
+      // Support localized title/desc: { title: {zh,en}, desc: {zh,en} } OR flat string
+      function loc(val) {
+        if (typeof val === 'object' && val !== null) return val[I18n.locale] || val['zh'] || val['en'] || '';
+        return val || '';
+      }
+      card.innerHTML =
+        '<div>' +
+          '<div class="position-card__title">' + loc(p.title) + '</div>' +
+          '<div class="position-card__type">' + loc(p.type) + '</div>' +
+          '<div class="position-card__desc">' + loc(p.desc) + '</div>' +
+        '</div>' +
+        '<a href="mailto:' + c.JOBS_EMAIL + '?subject=' + encodeURIComponent((I18n.t('careers.apply_subject') || '') + loc(p.title)) + '" class="btn btn--secondary" style="flex-shrink:0;white-space:nowrap;" data-i18n="careers.btn_apply">' + I18n.t('careers.btn_apply') + '</a>';
+      list.appendChild(card);
+    });
+  }
+})();
+</script>
+</body>
+</html>

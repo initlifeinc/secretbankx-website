@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-page-title-key="terms.page_title">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>服务条款 — SecretBankX</title>
+  <meta name="description" data-i18n-content="terms.meta_desc" content="" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="i18n/zh.js"></script>
+  <script src="i18n/en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="config.js"></script>
+  <script>I18n.init();</script>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <div class="navbar__brand-dot">🔐</div>
+        <span id="nav-brand">SecretBankX</span>
+      </a>
+      <button class="navbar__toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+          <rect y="3" width="20" height="2" rx="1"/><rect y="9" width="20" height="2" rx="1"/><rect y="15" width="20" height="2" rx="1"/>
+        </svg>
+      </button>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="index.html#features" data-i18n="nav.features">功能</a></li>
+        <li><a href="privacy.html" data-i18n="nav.privacy">隐私政策</a></li>
+        <li><a href="careers.html" data-i18n="nav.careers">加入我们</a></li>
+        <li>
+          <div class="lang-switcher" id="lang-switcher">
+            <button class="lang-switcher__btn" onclick="toggleLangMenu(event)">
+              <span id="lang-label">中文</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10L6 8z"/></svg>
+            </button>
+            <ul class="lang-switcher__menu" id="lang-menu">
+              <li><button data-lang-btn="zh" onclick="setLang('zh')">中文</button></li>
+              <li><button data-lang-btn="en" onclick="setLang('en')">English</button></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#download" class="navbar__cta" data-i18n="nav.download">下载</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Content ────────────────────────────────────────────── -->
+<main class="doc-page">
+  <div class="container container--narrow">
+
+    <div class="doc-page__header">
+      <h1 data-i18n="terms.h1">服务条款</h1>
+      <p class="doc-page__meta">
+        <span data-i18n="terms.label_effective">生效日期：</span><span data-i18n="terms.effective_date"></span>
+        &nbsp;·&nbsp;
+        <span data-i18n="terms.label_updated">最后更新：</span><span data-i18n="terms.updated_date"></span>
+      </p>
+    </div>
+
+    <div class="doc-body">
+
+      <div class="doc-highlight">
+        <p data-i18n="terms.highlight"></p>
+      </div>
+
+      <h2 data-i18n="terms.s1_title">1. 接受条款</h2>
+      <p data-i18n="terms.s1_p1"></p>
+
+      <h2 data-i18n="terms.s2_title">2. 许可授权</h2>
+      <p data-i18n="terms.s2_p1"></p>
+      <p data-i18n="terms.s2_p2"></p>
+      <ul id="s2-list"></ul>
+
+      <h2 data-i18n="terms.s3_title">3. App Store 条款</h2>
+      <p id="s3-p1"></p>
+
+      <h2 data-i18n="terms.s4_title">4. 账户与安全责任</h2>
+      <p data-i18n="terms.s4_p1"></p>
+      <ul id="s4-list"></ul>
+
+      <h2 data-i18n="terms.s5_title">5. 用户行为准则</h2>
+      <p data-i18n="terms.s5_p1"></p>
+      <ul id="s5-list"></ul>
+
+      <h2 data-i18n="terms.s6_title">6. 知识产权</h2>
+      <p data-i18n="terms.s6_p1"></p>
+      <p data-i18n="terms.s6_p2"></p>
+
+      <h2 data-i18n="terms.s7_title">7. 免责声明</h2>
+      <p data-i18n-html="terms.s7_p1"></p>
+      <p data-i18n="terms.s7_p2"></p>
+      <ul id="s7-list"></ul>
+      <p data-i18n-html="terms.s7_p3"></p>
+
+      <h2 data-i18n="terms.s8_title">8. 责任限制</h2>
+      <p data-i18n="terms.s8_p1"></p>
+      <ul id="s8-list"></ul>
+
+      <h2 data-i18n="terms.s9_title">9. 条款变更</h2>
+      <p data-i18n="terms.s9_p1"></p>
+
+      <h2 data-i18n="terms.s10_title">10. 终止</h2>
+      <p data-i18n="terms.s10_p1"></p>
+
+      <h2 data-i18n="terms.s11_title">11. 适用法律</h2>
+      <p data-i18n="terms.s11_p1"></p>
+
+      <h2 data-i18n="terms.s12_title">12. 完整协议</h2>
+      <p id="s12-p1"></p>
+
+      <h2 data-i18n="terms.s13_title">13. 联系我们</h2>
+      <p data-i18n="terms.s13_p1"></p>
+      <ul>
+        <li><span data-i18n="terms.s13_list_email">邮件：</span><a href="#" id="contact-email-link"></a></li>
+        <li id="s13-dev"></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span>🔐</span>
+        <span id="footer-brand">SecretBankX</span>
+        <span style="color:var(--text-3);font-weight:400;" id="footer-copyright"></span>
+      </div>
+      <nav class="footer__links">
+        <a href="index.html"   data-i18n="footer.home">首页</a>
+        <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+        <a href="terms.html"   data-i18n="footer.terms">服务条款</a>
+        <a href="careers.html" data-i18n="footer.careers">加入我们</a>
+        <a href="#" id="footer-contact" data-i18n="footer.contact">联系我们</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+function toggleLangMenu(e) { e.stopPropagation(); document.getElementById('lang-switcher').classList.toggle('open'); }
+document.addEventListener('click', function() { var s=document.getElementById('lang-switcher'); if(s) s.classList.remove('open'); });
+
+I18n.applyDOM();
+I18n.updateSwitcher();
+
+(function() {
+  var c   = SBX_CONFIG;
+  var cfg = { company: c.COMPANY_NAME_FULL || c.COMPANY_NAME, contact_email: c.CONTACT_EMAIL };
+
+  // Lang label
+  var labels = {zh:'中文', en:'English'};
+  var ll = document.getElementById('lang-label');
+  if (ll) ll.textContent = labels[I18n.locale] || I18n.locale;
+
+  // Brand / copyright
+  document.getElementById('nav-brand').textContent = c.APP_NAME;
+  document.getElementById('footer-brand').textContent = c.APP_NAME;
+  var yr = new Date().getFullYear(), sy = c.COPYRIGHT_YEAR;
+  document.getElementById('footer-copyright').innerHTML = '&nbsp;·&nbsp;© ' + (String(sy)===String(yr)?yr:sy+'–'+yr) + ' ' + c.COMPANY_NAME;
+  document.getElementById('footer-contact').href = 'mailto:' + c.CONTACT_EMAIL;
+
+  // Email link
+  var emailLink = document.getElementById('contact-email-link');
+  if (emailLink) { emailLink.href = 'mailto:' + c.CONTACT_EMAIL; emailLink.textContent = c.CONTACT_EMAIL; }
+
+  // Developer list item
+  var s13dev = document.getElementById('s13-dev');
+  if (s13dev) s13dev.textContent = (I18n.t('terms.s13_list_dev') || '').replace(/\{\{company\}\}/g, cfg.company);
+
+  // s3 p1 with Apple link
+  var s3p1 = document.getElementById('s3-p1');
+  if (s3p1) {
+    var raw = I18n.t('terms.s3_p1', cfg);
+    var appleUrl = 'https://www.apple.com/legal/internet-services/itunes/';
+    var appleText = I18n.locale === 'zh' ? 'Apple Media Services 服务条款' : 'Apple Media Services Terms and Conditions';
+    s3p1.innerHTML = raw.replace(appleText, '<a href="' + appleUrl + '" target="_blank" rel="noopener">' + appleText + '</a>');
+  }
+
+  // s12 p1 with privacy link
+  var s12p1 = document.getElementById('s12-p1');
+  if (s12p1) {
+    var raw12 = I18n.t('terms.s12_p1', cfg);
+    var privText = I18n.t('terms.s12_privacy_link');
+    s12p1.innerHTML = raw12.replace(privText, '<a href="privacy.html">' + privText + '</a>');
+  }
+
+  // Interpolate {{company}} in already-rendered data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    if (el.textContent.indexOf('{{') !== -1) {
+      el.textContent = el.textContent.replace(/\{\{company\}\}/g, cfg.company);
+    }
+  });
+
+  // Render lists
+  function renderList(id, key) {
+    var ul = document.getElementById(id);
+    if (!ul) return;
+    (I18n.t(key) || []).forEach(function(item) {
+      var li = document.createElement('li');
+      li.innerHTML = item;
+      ul.appendChild(li);
+    });
+  }
+  renderList('s2-list', 'terms.s2_list');
+  renderList('s4-list', 'terms.s4_list');
+  renderList('s5-list', 'terms.s5_list');
+  renderList('s7-list', 'terms.s7_list');
+  renderList('s8-list', 'terms.s8_list');
+})();
+</script>
+</body>
+</html>
