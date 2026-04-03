@@ -25,7 +25,7 @@ const SBX_CONFIG = {
   TESTFLIGHT_URL: "",       // TestFlight 内测链接（可选）
 
   // ── 代码仓库 / 社区 ────────────────────────────────────
-  GITHUB_URL: "https://github.com/initlife/secretbankx",  // GitHub 主页
+  GITHUB_URL: "https://github.com/initlifeinc/secretbankx-website",  // GitHub 主页
   TWITTER_URL: "",          // Twitter/X 链接（可选）
   TELEGRAM_URL: "",         // Telegram 频道（可选）
 
