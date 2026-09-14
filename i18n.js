@@ -1,23 +1,19 @@
 /**
  * SecretBankX i18n Engine
  * - 支持语言：zh（中文）、en（英文），可按需扩展
- * - 检测顺序：localStorage → navigator.language → 默认 zh
+ * - 检测顺序：localStorage → 默认 en（英文首发）
  * - 新增语言：在 i18n/ 目录添加 <lang>.js，在 SUPPORTED 中注册即可
  */
 (function() {
   var SUPPORTED = ['zh', 'en'];
-  var DEFAULT   = 'zh';
+  var DEFAULT   = 'en';
 
   // ── 语言检测 ─────────────────────────────────────────
   function detectLang() {
     // 1. 用户上次选择
     var saved = localStorage.getItem('sbx_lang');
     if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
-    // 2. 浏览器语言
-    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    if (nav.startsWith('zh')) return 'zh';
-    if (nav.startsWith('en')) return 'en';
-    // 3. 默认
+    // 2. 默认。首发网站不按浏览器语言自动切换，用户可显式选择并保留偏好。
     return DEFAULT;
   }
 

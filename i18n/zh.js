@@ -23,10 +23,10 @@ window.LOCALES.zh = {
 
   // ── 首页 ─────────────────────────────────────────────
   home: {
-    hero_badge:           "本地优先 · 零知识 · 完全离线",
+    hero_badge:           "本地优先 · 隐私优先 · 可离线使用",
     hero_title_main:      "你的秘密，",
     hero_title_gradient:  "只属于你",
-    hero_desc:            "本地优先的零知识密码管理器，为 iOS、iPadOS 与 macOS 深度打造。无账号，无服务器，无妥协。",
+    hero_desc:            "面向 iPhone、iPad 与 Mac 的本地优先重要资料管理工具，用于保存密码与个人重要资料。",
     btn_appstore:         "App Store 下载",
     btn_appstore_soon:    "即将上线",
     btn_github:           "GitHub",
@@ -37,21 +37,21 @@ window.LOCALES.zh = {
     features_desc:   "专为注重隐私的人设计，每一个决策都以你的数据安全为优先。",
 
     security_label:  "安全架构",
-    security_title:  "密码学级别的信任，\n从不妥协",
+    security_title:  "审慎的安全设计，\n清晰的数据边界",
     security_p1:     "SecretBankX 采用双层数据库架构。用户元数据与业务数据完全隔离，Vault 数据库使用 SQLCipher 进行文件级强加密。",
     security_p2:     "主密码永远不会以任何形式存储或传输，所有加密运算均在本地完成。",
     security_list: [
       "SQLCipher 文件级 AES-256 加密",
       "主密码永不离开设备",
-      "零服务器依赖，无法被中间人攻击",
+      "可选加密 iCloud 同步，供你自己的设备使用",
       "生物识别（Face ID / Touch ID）快速解锁",
       "支持多 Vault，独立密码隔离",
-      "开源可审计的 C++17 加密核心"
+      "面向 iPhone、iPad 与 Mac 设计"
     ],
 
-    platforms_label: "全平台支持",
-    platforms_title: "一套代码，原生三端",
-    platforms_desc:  "C++17 跨平台核心 + SwiftUI 原生界面，在每台 Apple 设备上都提供流畅的原生体验。",
+    platforms_label: "Apple 平台支持",
+    platforms_title: "为 Apple 设备而设计",
+    platforms_desc:  "支持 iPhone、iPad 与 Mac，以本地优先的资料库为核心。",
     platform_iphone:     "iPhone",
     platform_iphone_sub: "iOS 16+\n紧凑布局优化",
     platform_ipad:       "iPad",
@@ -60,15 +60,15 @@ window.LOCALES.zh = {
     platform_mac_sub:    "macOS 13+\n原生 Catalyst",
 
     cta_title: "准备好掌控你的数字安全了吗？",
-    cta_desc:  "免费下载，一次买断，永久拥有。无订阅，无套路。",
+    cta_desc:  "先使用基础密码管理功能；高级工具在真正帮到你时再升级。",
 
     features_items: [
-      { icon: "🔐", title: "零知识加密",     desc: "主密码永远不离开你的设备。所有数据在本地完成加密，即使是我们也无法读取你的内容。" },
-      { icon: "🖥",  title: "全平台原生体验", desc: "专为 iOS、iPadOS 和 macOS 深度定制，SwiftUI 原生界面，流畅自然，无任何妥协。" },
-      { icon: "🛡",  title: "军事级加密算法", desc: "底层采用 SQLCipher 文件加密 + AES-256，结合生物识别快速解锁，安全与便利兼得。" },
-      { icon: "📴",  title: "完全离线可用",   desc: "无需网络，无需账号，无需服务器。你的数据永远在你手中，随时可用。" },
+      { icon: "🔐", title: "本地加密资料库", desc: "资料库在设备上加密，访问与恢复控制由你掌握。" },
+      { icon: "🖥",  title: "原生 Apple 体验", desc: "为 iPhone、iPad 与 Mac 的系统交互方式设计。" },
+      { icon: "🛡",  title: "安全存储", desc: "加密资料库与设备认证共同帮助保护你的重要信息。" },
+      { icon: "📴",  title: "可离线使用", desc: "断网时仍可访问本地资料库；也可选择为自己的设备启用加密 iCloud 同步。" },
       { icon: "🔄",  title: "多 Vault 管理",  desc: "支持创建多个独立加密保险库，工作与个人数据彻底隔离，各自设置不同密码。" },
-      { icon: "🧩",  title: "开放架构",       desc: "C++17 跨平台核心，代码可审计，不依赖任何私有云服务，你的数据主权完全在你。" }
+      { icon: "🧩",  title: "清晰的数据边界", desc: "本地存储、导出、备份与恢复均以可理解、可掌控为设计目标。" }
     ]
   },
 
@@ -78,11 +78,11 @@ window.LOCALES.zh = {
     meta_desc:      "SecretBankX 隐私政策：我们如何保护你的数据。",
     h1:             "隐私政策",
     effective_date: "2024 年 1 月 1 日",
-    updated_date:   "2024 年 1 月 1 日",
+    updated_date:   "2026 年 8 月 31 日",
     label_effective: "生效日期：",
     label_updated:   "最后更新：",
 
-    highlight: "<strong>核心承诺：</strong>SecretBankX 采用本地优先、零知识架构。你存储的所有密码与账号数据仅保存在你自己的设备上，我们没有服务器来接收、存储或访问这些数据。",
+    highlight: "<strong>核心承诺：</strong>SecretBankX 采用本地优先设计。我们不运营接收、存储或读取你资料库内容的服务；若你启用 iCloud 同步，加密文件会按 Apple 条款存入你自己的 iCloud 容器。",
 
     s1_title: "1. 概述",
     s1_p1: '本隐私政策说明 {{company}}（"我们"、"我们的"）在你使用 SecretBankX 应用程序（"App"）时如何处理相关信息。我们非常重视你的隐私，并以此为产品设计的核心原则。',
@@ -99,12 +99,15 @@ window.LOCALES.zh = {
     s2_2_title: "2.2 App 本身可能处理的信息",
     s2_2_p1: "为了提供核心功能，App 在本地处理以下信息，这些信息不会传输给我们：",
     s2_2_list: [
-      "<strong>设备生物识别：</strong>Face ID 或 Touch ID 认证由 Apple 系统框架在本地完成，结果仅返回成功或失败，我们无法访问生物特征原始数据。",
-      "<strong>本地存储：</strong>加密的 Vault 数据库文件存储在 App 的沙盒目录中，仅能被 App 访问。",
-      "<strong>iCloud 备份（如已启用）：</strong>如果你在 iOS 设置中开启了 iCloud 备份，加密的数据库文件可能包含在备份中。该文件始终保持加密状态，Apple 的隐私政策适用于该过程。"
+      "<strong>设备生物识别：</strong>Face ID、Touch ID 或其他系统支持的生物识别认证由 Apple 系统框架在本地完成，结果仅返回成功或失败，我们无法访问生物特征原始数据。",
+      "<strong>本地加密存储：</strong>加密的 Vault 数据库文件存储在 App 沙盒或 App Group 共享容器中，用于让主 App 与 AutoFill Extension 访问同一份本地数据。我们不会收到这些文件。",
+      "<strong>iCloud Drive 同步（如已启用）：</strong>如果你在 App 内开启 iCloud 同步，App 会把加密备份文件写入你自己的 iCloud Drive 容器，用于你设备之间同步。文件在上传前已加密；Apple 的隐私政策和 iCloud 条款适用于 iCloud 存储与传输。",
+      "<strong>AutoFill Extension：</strong>启用系统密码自动填充时，App 会在本机注册可匹配的网站域名和凭据标识，便于 iOS 在 Safari 或其他 App 中展示 SecretBankX 候选项。实际密码只在你选择凭据并完成解锁后用于填充。",
+      "<strong>本地网络 / WiFi 传输：</strong>当你主动启动 WiFi 传输时，App 会在局域网内临时开启本机服务并生成一次性访问令牌，用于在同一网络中的浏览器导入或导出加密备份。该服务不会把数据发送给我们。",
+      "<strong>购买状态：</strong>如果 App 提供付费功能，购买、订阅、退款和恢复购买由 Apple App Store / StoreKit 处理。App 可能读取 Apple 返回的本机交易状态以解锁功能，我们不会接收你的完整付款信息。"
     ],
     s2_3_title: "2.3 通过 App Store 分发收集的信息",
-    s2_3_p1: "App 通过 Apple App Store 分发。Apple 可能会根据其隐私政策收集与下载和使用相关的匿名统计数据（例如崩溃报告、安装量）。我们可能会查看 Apple 提供的聚合、匿名化统计数据以改善 App，但无法关联到具体个人。",
+    s2_3_p1: "App 通过 Apple App Store 分发。Apple 可能会根据其隐私政策处理与下载、购买、订阅、退款、崩溃报告和安装量相关的信息。我们可能会查看 Apple 提供的聚合、匿名化统计数据以改善 App，但无法关联到具体个人。",
     s2_4_title: "2.4 你主动联系我们时",
     s2_4_p1: "当你通过电子邮件或其他方式联系我们时，你提供的信息（如姓名、邮件地址、反馈内容）将用于回复你的咨询，不会用于其他目的，也不会出售给第三方。",
 
@@ -114,7 +117,8 @@ window.LOCALES.zh = {
       "<strong>文件级加密：</strong>Vault 数据库使用 SQLCipher 进行 AES-256 加密。",
       "<strong>密钥推导：</strong>通过 PBKDF2 从你的主密码推导加密密钥，密钥不以任何形式存储。",
       "<strong>内存保护：</strong>解密密钥仅在 App 活跃期间驻留内存，锁定后立即清除。",
-      "<strong>沙盒隔离：</strong>数据文件存储在 App 沙盒内，其他应用无法访问。"
+      "<strong>沙盒与 App Group 隔离：</strong>主 App 和 AutoFill Extension 通过受系统保护的 App Group 共享必要数据；其他应用无法访问该容器。",
+      "<strong>同步与传输加密：</strong>通过 iCloud Drive 同步或 WiFi 传输导出的备份文件在离开当前 App 前保持加密。"
     ],
     s3_p2: "由于我们不持有你的数据，因此也不存在我们的服务器被攻击从而泄露你密码的风险。",
 
@@ -127,13 +131,13 @@ window.LOCALES.zh = {
 
     s6_title: "6. 第三方服务",
     s6_p1: "SecretBankX 不集成任何第三方分析服务、广告网络或追踪 SDK。",
-    s6_p2: "App 使用的所有第三方开源库（包括 SQLCipher、OpenSSL、nlohmann/json 等）均在本地运行，不向任何第三方传输数据。",
+    s6_p2: "App 使用 Apple 系统服务提供 App Store 分发与购买、iCloud Drive 同步、Keychain/生物识别、AutoFill Extension 和本地网络能力。App 使用的第三方开源库（包括 SQLCipher、OpenSSL、nlohmann/json 等）均在本地运行，不向任何第三方传输数据。",
 
     s7_title: "7. 你的权利",
     s7_p1: "由于我们不持有你的个人数据，你对自己数据拥有完全控制权：",
     s7_list: [
       "<strong>访问与导出：</strong>你的数据就在你的设备上，可随时在 App 内查看。",
-      "<strong>删除：</strong>卸载 App 或在 App 内删除 Vault 即可永久删除对应数据。",
+      "<strong>删除：</strong>你可以卸载 App、在 App 内删除账号或移除本地 Vault 来删除此设备上的数据。已同步到 iCloud Drive 或其他设备的加密备份可能需要你在对应位置另行删除。",
       "<strong>可移植性：</strong>App 支持数据导出，让你随时迁移。"
     ],
     s7_p2: "如有联系我们时留下的邮件信息希望删除，请发送邮件至 {{privacy_email}}，我们将在合理时间内处理。",
@@ -153,7 +157,7 @@ window.LOCALES.zh = {
     meta_desc:       "SecretBankX 服务条款：使用本 App 的权利与限制。",
     h1:              "服务条款",
     effective_date:  "2024 年 1 月 1 日",
-    updated_date:    "2024 年 1 月 1 日",
+    updated_date:    "2026 年 9 月 14 日",
     label_effective: "生效日期：",
     label_updated:   "最后更新：",
 
@@ -173,13 +177,14 @@ window.LOCALES.zh = {
     ],
 
     s3_title: "3. App Store 条款",
-    s3_p1: "SecretBankX 通过 Apple App Store 分发。你对 App 的使用还受到 Apple Media Services 服务条款的约束。如本条款与 Apple 的条款存在冲突，以 Apple 的条款为准（仅限于冲突部分）。",
+    s3_p1: "SecretBankX 通过 Apple App Store 分发。下载、购买、订阅、退款和恢复购买由 Apple App Store / StoreKit 处理，并受到 Apple Media Services 服务条款的约束。高级版年付为自动续订的年度订阅：美国价格为每年 2.99 美元。符合资格的新订阅用户可在 2026 年 12 月 31 日前享受一次性支付 0.99 美元、覆盖前 6 个月的首购优惠；其后除非在当前周期结束前至少 24 小时取消，否则将按适用的年度价格自动续订。高级版永久为一次性、非消耗型购买，美国价格为 9.99 美元。价格和可售性会因店面而异；你可以在 Apple 账户的订阅设置中管理或取消订阅。如本条款与 Apple 的条款存在冲突，以 Apple 的条款为准（仅限于冲突部分）。",
 
     s4_title: "4. 账户与安全责任",
     s4_p1: "SecretBankX 不需要你创建账户。你对以下内容负有完全责任：",
     s4_list: [
       "<strong>主密码：</strong>你设置的主密码是访问数据的唯一凭证。如果你忘记主密码，我们无法为你恢复数据，因为我们没有服务器存储任何密钥。",
-      "<strong>数据备份：</strong>强烈建议你定期备份你的 Vault 数据。设备丢失、损坏或 App 数据被删除可能导致数据永久丢失，我们对此不承担责任。",
+      "<strong>数据备份与同步：</strong>强烈建议你定期备份你的 Vault 数据。若你启用 iCloud Drive 同步，你仍需确保自己的 Apple ID、iCloud 存储空间和设备同步状态可用。设备丢失、损坏、App 数据被删除或云端文件被你移除可能导致数据永久丢失，我们对此不承担责任。",
+      "<strong>AutoFill 与本地网络：</strong>启用 AutoFill Extension 或 WiFi 传输时，你需要确认目标网站、目标 App、同一局域网设备和浏览器环境可信。请勿在不可信设备或网络中导入、导出或填充敏感凭据。",
       "<strong>设备安全：</strong>保持你的设备和操作系统更新，防止未经授权的物理访问。"
     ],
 
@@ -209,6 +214,7 @@ window.LOCALES.zh = {
     s8_p1: "在法律允许的最大范围内，{{company}} 及其关联方、董事、员工、代理商不对以下任何损失承担责任：",
     s8_list: [
       "因忘记主密码或设备丢失导致的数据丢失",
+      "因 iCloud Drive、App Store、StoreKit、AutoFill、Local Network 或其他 Apple 系统服务不可用、延迟、政策变化或账号状态异常导致的影响",
       "因使用或无法使用 App 造成的任何直接、间接、偶然、特殊或后果性损失",
       "未经授权访问你的设备或数据导致的损失",
       "任何金额超过你在事件发生前 12 个月内为 App 支付的费用"

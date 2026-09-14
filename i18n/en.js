@@ -23,10 +23,10 @@ window.LOCALES.en = {
 
   // ── Home Page ─────────────────────────────────────────
   home: {
-    hero_badge:           "Local-First · Zero-Knowledge · Fully Offline",
+    hero_badge:           "Local-First · Private by Design · Works Offline",
     hero_title_main:      "Your Secrets.",
     hero_title_gradient:  "Only Yours.",
-    hero_desc:            "A local-first, zero-knowledge password manager built natively for iOS, iPadOS, and macOS. No account. No server. No compromises.",
+    hero_desc:            "A local-first app for passwords and important personal information on iPhone, iPad, and Mac.",
     btn_appstore:         "Download on App Store",
     btn_appstore_soon:    "Coming Soon",
     btn_github:           "GitHub",
@@ -37,21 +37,21 @@ window.LOCALES.en = {
     features_desc:  "Designed for people who care about privacy. Every decision puts your data security first.",
 
     security_label: "Security Architecture",
-    security_title: "Cryptographic-grade trust,\nnever compromised",
+    security_title: "Thoughtful security,\nclear boundaries",
     security_p1:    "SecretBankX uses a dual-layer database architecture. User metadata and vault data are completely isolated. Vault databases are encrypted at the file level using SQLCipher.",
     security_p2:    "Your master password is never stored or transmitted in any form. All cryptographic operations happen locally on your device.",
     security_list: [
       "SQLCipher file-level AES-256 encryption",
       "Master password never leaves your device",
-      "Zero server dependency — immune to man-in-the-middle attacks",
+      "Optional encrypted iCloud sync between your devices",
       "Biometric unlock (Face ID / Touch ID)",
       "Multiple Vaults with independent passwords",
-      "Open, auditable C++17 encryption core"
+      "Designed for iPhone, iPad, and Mac"
     ],
 
-    platforms_label: "Full Platform Support",
-    platforms_title: "One Codebase. Three Native Apps.",
-    platforms_desc:  "C++17 cross-platform core + SwiftUI native UI. A fluid, native experience on every Apple device.",
+    platforms_label: "Apple Platform Support",
+    platforms_title: "Built for Apple devices.",
+    platforms_desc:  "Designed for iPhone, iPad, and Mac, with a local-first vault at the center.",
     platform_iphone:     "iPhone",
     platform_iphone_sub: "iOS 16+\nOptimized for compact layout",
     platform_ipad:       "iPad",
@@ -60,15 +60,15 @@ window.LOCALES.en = {
     platform_mac_sub:    "macOS 13+\nNative Catalyst",
 
     cta_title: "Ready to take control of your digital security?",
-    cta_desc:  "Free to download. One-time purchase. Yours forever. No subscriptions. No tricks.",
+    cta_desc:  "Start with core password management, then upgrade when advanced tools help.",
 
     features_items: [
-      { icon: "🔐", title: "Zero-Knowledge Encryption", desc: "Your master password never leaves your device. All data is encrypted locally — even we can't read your content." },
-      { icon: "🖥",  title: "Native on All Platforms",   desc: "Deeply optimized for iOS, iPadOS, and macOS. SwiftUI native interface — smooth, natural, zero compromises." },
-      { icon: "🛡",  title: "Military-Grade Encryption", desc: "SQLCipher file encryption + AES-256 at the core, paired with biometric unlock for the perfect balance of security and convenience." },
-      { icon: "📴",  title: "Fully Offline",             desc: "No internet required. No account needed. No server involved. Your data stays in your hands, always available." },
+      { icon: "🔐", title: "Encrypted Local Vaults", desc: "Your vault is encrypted on device, with access and recovery controls kept in your hands." },
+      { icon: "🖥",  title: "Native Apple Experience", desc: "Designed for iPhone, iPad, and Mac with familiar system interactions." },
+      { icon: "🛡",  title: "Secure Storage", desc: "Encrypted vault storage and device authentication help protect your information." },
+      { icon: "📴",  title: "Works Offline", desc: "Access local vaults when disconnected, with optional encrypted iCloud sync for your devices." },
       { icon: "🔄",  title: "Multiple Vaults",           desc: "Create multiple independently encrypted vaults. Keep work and personal data completely separate, each with its own password." },
-      { icon: "🧩",  title: "Open Architecture",         desc: "C++17 cross-platform core. Auditable code. No proprietary cloud dependency. Full data sovereignty." }
+      { icon: "🧩",  title: "Clear Data Boundaries", desc: "Local storage, export, backup, and recovery are designed to stay understandable and under your control." }
     ]
   },
 
@@ -78,11 +78,11 @@ window.LOCALES.en = {
     meta_desc:       "SecretBankX Privacy Policy: how we protect your data.",
     h1:              "Privacy Policy",
     effective_date:  "January 1, 2024",
-    updated_date:    "January 1, 2024",
+    updated_date:    "September 14, 2026",
     label_effective: "Effective Date: ",
     label_updated:   "Last Updated: ",
 
-    highlight: "<strong>Core commitment:</strong> SecretBankX uses a local-first, zero-knowledge architecture. All passwords and account data you store exist only on your own device. We have no server that receives, stores, or can access your data.",
+    highlight: "<strong>Core commitment:</strong> SecretBankX is local-first. We do not operate a service that receives, stores, or reads the vault data you create. If you enable iCloud sync, encrypted files are stored in your own iCloud container under Apple's terms.",
 
     s1_title: "1. Overview",
     s1_p1: 'This Privacy Policy explains how {{company}} ("we", "our") handles information when you use the SecretBankX application ("App"). We take your privacy seriously — it is a core principle behind every product decision we make.',
@@ -99,12 +99,15 @@ window.LOCALES.en = {
     s2_2_title: "2.2 Information Processed Locally by the App",
     s2_2_p1: "To provide core functionality, the App processes the following information locally on your device. This information is never transmitted to us:",
     s2_2_list: [
-      "<strong>Device Biometrics:</strong> Face ID or Touch ID authentication is handled entirely by Apple's system frameworks on-device. Only a success/failure result is returned; we cannot access raw biometric data.",
-      "<strong>Local Storage:</strong> Encrypted Vault database files are stored in the App's sandboxed container, inaccessible to other apps.",
-      "<strong>iCloud Backup (if enabled):</strong> If you have iCloud Backup enabled in iOS Settings, encrypted database files may be included in your backup. These files remain encrypted at all times. Apple's privacy policy governs that process."
+      "<strong>Device Biometrics:</strong> Face ID, Touch ID, or other system-supported biometric authentication is handled entirely by Apple's system frameworks on-device. Only a success/failure result is returned; we cannot access raw biometric data.",
+      "<strong>Local Encrypted Storage:</strong> Encrypted Vault database files are stored in the App sandbox or App Group shared container so the main App and AutoFill Extension can access the same local data. We do not receive these files.",
+      "<strong>iCloud Drive Sync (if enabled):</strong> If you enable iCloud sync in the App, the App writes encrypted backup files to your own iCloud Drive container for syncing between your devices. Files are encrypted before upload; Apple's privacy policy and iCloud terms govern iCloud storage and transfer.",
+      "<strong>AutoFill Extension:</strong> When system password AutoFill is enabled, the App registers matching website domains and credential identifiers on-device so iOS can show SecretBankX suggestions in Safari or other apps. Actual passwords are used for filling only after you select a credential and unlock.",
+      "<strong>Local Network / Wi-Fi Transfer:</strong> When you explicitly start Wi-Fi Transfer, the App temporarily runs a local service on your device and generates a one-time access token for importing or exporting encrypted backups from a browser on the same network. This service does not send data to us.",
+      "<strong>Purchase Status:</strong> If the App offers paid features, purchases, subscriptions, refunds, and purchase restoration are handled by Apple App Store / StoreKit. The App may read the local transaction state returned by Apple to unlock features; we do not receive your full payment information."
     ],
     s2_3_title: "2.3 Information Collected via the App Store",
-    s2_3_p1: "The App is distributed through the Apple App Store. Apple may collect anonymized usage statistics (e.g., crash reports, install counts) per its privacy policy. We may review aggregated, anonymized data Apple provides to improve the App, but this cannot be linked to any individual.",
+    s2_3_p1: "The App is distributed through the Apple App Store. Apple may process information related to downloads, purchases, subscriptions, refunds, crash reports, and install counts according to its privacy policy. We may review aggregated, anonymized data Apple provides to improve the App, but this cannot be linked to any individual.",
     s2_4_title: "2.4 When You Contact Us",
     s2_4_p1: "If you contact us by email or other means, the information you provide (e.g., name, email address, feedback) will be used solely to respond to your inquiry. It will not be used for any other purpose or sold to third parties.",
 
@@ -114,7 +117,8 @@ window.LOCALES.en = {
       "<strong>File-level encryption:</strong> Vault databases use SQLCipher with AES-256.",
       "<strong>Key derivation:</strong> Encryption keys are derived from your master password via PBKDF2 and are never stored in any form.",
       "<strong>Memory protection:</strong> Decryption keys reside in memory only while the App is active, and are cleared immediately upon locking.",
-      "<strong>Sandbox isolation:</strong> Data files are stored within the App sandbox and cannot be accessed by other apps."
+      "<strong>Sandbox and App Group isolation:</strong> The main App and AutoFill Extension share necessary data through a system-protected App Group container; other apps cannot access that container.",
+      "<strong>Encrypted sync and transfer:</strong> Backups exported through iCloud Drive sync or Wi-Fi Transfer remain encrypted before leaving the current App."
     ],
     s3_p2: "Because we never hold your data, there is no risk of a server breach exposing your passwords.",
 
@@ -127,13 +131,13 @@ window.LOCALES.en = {
 
     s6_title: "6. Third-Party Services",
     s6_p1: "SecretBankX does not integrate any third-party analytics services, advertising networks, or tracking SDKs.",
-    s6_p2: "All third-party open-source libraries used by the App (including SQLCipher, OpenSSL, nlohmann/json, etc.) run locally and transmit no data to any third party.",
+    s6_p2: "The App uses Apple system services for App Store distribution and purchases, iCloud Drive sync, Keychain/biometrics, the AutoFill Extension, and local network features. Third-party open-source libraries used by the App (including SQLCipher, OpenSSL, nlohmann/json, etc.) run locally and transmit no data to any third party.",
 
     s7_title: "7. Your Rights",
     s7_p1: "Because we do not hold your personal data, you have complete control over it:",
     s7_list: [
       "<strong>Access & Export:</strong> Your data lives on your device and can be viewed at any time within the App.",
-      "<strong>Deletion:</strong> Uninstalling the App or deleting a Vault within the App permanently removes the corresponding data.",
+      "<strong>Deletion:</strong> You can delete data from this device by uninstalling the App, deleting your account in the App, or removing a local Vault. Encrypted backups already synced to iCloud Drive or other devices may need to be removed separately from those locations.",
       "<strong>Portability:</strong> The App supports data export, allowing you to migrate at any time."
     ],
     s7_p2: "If you wish to have any email correspondence you've sent us deleted, please contact us at {{privacy_email}} and we will handle it within a reasonable timeframe.",
@@ -153,7 +157,7 @@ window.LOCALES.en = {
     meta_desc:       "SecretBankX Terms of Service: your rights and restrictions when using the App.",
     h1:              "Terms of Service",
     effective_date:  "January 1, 2024",
-    updated_date:    "January 1, 2024",
+    updated_date:    "August 31, 2026",
     label_effective: "Effective Date: ",
     label_updated:   "Last Updated: ",
 
@@ -173,13 +177,14 @@ window.LOCALES.en = {
     ],
 
     s3_title: "3. App Store Terms",
-    s3_p1: "SecretBankX is distributed through the Apple App Store. Your use of the App is also subject to the Apple Media Services Terms and Conditions. In the event of any conflict between these Terms and Apple's terms, Apple's terms will prevail (solely to the extent of the conflict).",
+    s3_p1: "SecretBankX is distributed through the Apple App Store. Downloads, purchases, subscriptions, refunds, and purchase restoration are handled by Apple App Store / StoreKit and are also subject to the Apple Media Services Terms and Conditions. Premium Yearly is an auto-renewing annual subscription: its U.S. price is US$2.99 per year. Eligible new subscribers may receive a US$0.99 pay-up-front introductory offer covering the first 6 months through December 31, 2026; afterward it renews at the applicable annual price unless cancelled at least 24 hours before the end of the current period. Premium Lifetime is a one-time, non-consumable purchase priced at US$9.99 in the U.S. Prices and availability vary by storefront. You can manage or cancel subscriptions in your Apple Account subscription settings. In the event of any conflict between these Terms and Apple's terms, Apple's terms will prevail (solely to the extent of the conflict).",
 
     s4_title: "4. Account & Security Responsibilities",
     s4_p1: "SecretBankX does not require you to create an account. You bear full responsibility for:",
     s4_list: [
       "<strong>Master Password:</strong> Your master password is the sole credential for accessing your data. If you forget your master password, we cannot recover your data — we have no server storing any keys.",
-      "<strong>Data Backups:</strong> We strongly recommend regularly backing up your Vault data. Loss of a device, accidental data deletion, or App data removal may result in permanent data loss, for which we are not liable.",
+      "<strong>Data Backups and Sync:</strong> We strongly recommend regularly backing up your Vault data. If you enable iCloud Drive sync, you remain responsible for keeping your Apple ID, iCloud storage, and device sync state available. Loss of a device, accidental App data removal, or removal of cloud files may result in permanent data loss, for which we are not liable.",
+      "<strong>AutoFill and Local Network:</strong> When using the AutoFill Extension or Wi-Fi Transfer, you are responsible for confirming that the target website, target app, same-network device, and browser environment are trustworthy. Do not import, export, or fill sensitive credentials on untrusted devices or networks.",
       "<strong>Device Security:</strong> Keep your device and operating system up to date and prevent unauthorized physical access."
     ],
 
@@ -209,6 +214,7 @@ window.LOCALES.en = {
     s8_p1: "To the fullest extent permitted by law, {{company}} and its affiliates, directors, employees, and agents shall not be liable for:",
     s8_list: [
       "Data loss resulting from a forgotten master password or lost device",
+      "Impacts caused by unavailability, delay, policy changes, or account-state issues in iCloud Drive, App Store, StoreKit, AutoFill, Local Network, or other Apple system services",
       "Any direct, indirect, incidental, special, or consequential damages arising from your use of or inability to use the App",
       "Damages resulting from unauthorized access to your device or data",
       "Any amount exceeding the fees you paid for the App in the 12 months preceding the incident"
