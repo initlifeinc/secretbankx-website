@@ -1,7 +1,7 @@
 /**
  * SecretBankX i18n Engine
  * - 支持语言：zh（中文）、en（英文），可按需扩展
- * - 检测顺序：localStorage → 默认 en（英文首发）
+ * - 检测顺序：用户手动选择 → 浏览器/系统语言 → 英文回退
  * - 新增语言：在 i18n/ 目录添加 <lang>.js，在 SUPPORTED 中注册即可
  */
 (function() {
@@ -10,10 +10,21 @@
 
   // ── 语言检测 ─────────────────────────────────────────
   function detectLang() {
-    // 1. 用户上次选择
-    var saved = localStorage.getItem('sbx_lang');
+    // 1. 用户上次手动选择。自动检测的结果不写入偏好，以便系统语言
+    //    变更或用户在另一种语言环境打开官网时仍可正确匹配。
+    var saved = localStorage.getItem('sbx_lang_manual');
     if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
-    // 2. 默认。首发网站不按浏览器语言自动切换，用户可显式选择并保留偏好。
+
+    // 2. 浏览器优先语言通常反映设备/系统语言。当前提供中英文：
+    //    任意中文区域变体（zh-CN、zh-Hant、zh-TW 等）使用中文，其余回退英文。
+    var languages = navigator.languages && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language || navigator.userLanguage || ''];
+    for (var i = 0; i < languages.length; i += 1) {
+      if (String(languages[i]).toLowerCase().indexOf('zh') === 0) return 'zh';
+    }
+
+    // 3. 尚未提供对应翻译时使用英文。
     return DEFAULT;
   }
 
@@ -42,7 +53,6 @@
       var chosen = (lang && SUPPORTED.indexOf(lang) !== -1) ? lang : detectLang();
       this.locale  = chosen;
       this.strings = locales[chosen] || locales[DEFAULT] || {};
-      localStorage.setItem('sbx_lang', chosen);
       document.documentElement.lang = chosen === 'zh' ? 'zh-Hans' : chosen;
     },
 
@@ -61,7 +71,7 @@
     // 切换语言并刷新页面（最简单可靠的方式）
     setLang: function(lang) {
       if (SUPPORTED.indexOf(lang) === -1) return;
-      localStorage.setItem('sbx_lang', lang);
+      localStorage.setItem('sbx_lang_manual', lang);
       location.reload();
     },
 
