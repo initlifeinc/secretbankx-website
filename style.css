@@ -18,3 +18,6 @@
 @media(max-width:1100px){.device-stage{height:560px}.mac-capture{left:0;right:0;top:95px}.phone-capture{width:145px;right:13px;bottom:40px}}
 @media(max-width:800px){.device-stage{max-width:620px;height:560px;margin-top:5px}.mac-capture{left:10px;right:15px;top:55px}.phone-capture{width:165px;right:24px;bottom:28px}.semantic-art{border-radius:25px}}
 @media(max-width:520px){.device-stage{height:410px;margin-top:10px}.device-stage .orb{inset:20px -5px 40px 0}.mac-capture{left:0;right:8px;top:42px;border-width:3px;border-radius:11px;transform:rotate(-4deg)}.phone-capture{width:118px;right:12px;bottom:24px;border-width:3px;border-radius:19px}.device-stage figcaption{font-size:9px}.semantic-art{border-radius:23px}}
+
+/* Publisher identity, separate from the SecretBankX product icon. */
+.publisher-brand{display:inline-flex;align-items:center;gap:6px;font-size:11px;line-height:1.4}.publisher-brand img{display:block;flex:none;width:15px;height:15px;object-fit:contain}
