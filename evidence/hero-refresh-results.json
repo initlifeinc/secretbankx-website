@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-20T16:49:03.087Z",
+  "results": [
+    {
+      "lang": "zh",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "mac": "/assets/app-mac-apple-light.webp",
+      "phone": "/assets/app-iphone-home-light.webp"
+    },
+    {
+      "lang": "zh",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "mac": "/assets/app-mac-apple-light.webp",
+      "phone": "/assets/app-iphone-home-light.webp"
+    },
+    {
+      "lang": "zh",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "mac": "/assets/app-mac-apple-light.webp",
+      "phone": "/assets/app-iphone-home-light.webp"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "mac": "/assets/app-mac-apple-light.webp",
+      "phone": "/assets/app-iphone-home-light.webp"
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "mac": "/assets/app-mac-apple-light.webp",
+      "phone": "/assets/app-iphone-home-light.webp"
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "broken": [],
+      "mac": "/assets/app-mac-apple-light.webp",
+      "phone": "/assets/app-iphone-home-light.webp"
+    }
+  ],
+  "errors": []
+}

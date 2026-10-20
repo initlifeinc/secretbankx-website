@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "lang": "zh",
+      "width": 390,
+      "prices": [
+        "¥22",
+        "¥68",
+        "¥38",
+        "¥198"
+      ],
+      "terms": "PASS",
+      "overflow": false
+    },
+    {
+      "lang": "zh",
+      "width": 768,
+      "prices": [
+        "¥22",
+        "¥68",
+        "¥38",
+        "¥198"
+      ],
+      "terms": "PASS",
+      "overflow": false
+    },
+    {
+      "lang": "zh",
+      "width": 1440,
+      "prices": [
+        "¥22",
+        "¥68",
+        "¥38",
+        "¥198"
+      ],
+      "terms": "PASS",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "prices": [
+        "US$2.99",
+        "US$9.99",
+        "US$4.99",
+        "US$29.99"
+      ],
+      "terms": "PASS",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "prices": [
+        "US$2.99",
+        "US$9.99",
+        "US$4.99",
+        "US$29.99"
+      ],
+      "terms": "PASS",
+      "overflow": false
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "prices": [
+        "US$2.99",
+        "US$9.99",
+        "US$4.99",
+        "US$29.99"
+      ],
+      "terms": "PASS",
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

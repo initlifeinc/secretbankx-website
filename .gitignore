@@ -137,3 +137,8 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Local browser review captures (paths documented in evidence/README.md)
+evidence/*.png
+__pycache__/
+evidence/native-*/

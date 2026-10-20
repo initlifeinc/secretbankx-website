@@ -1,0 +1,74 @@
+{
+  "capturedAt": "2026-10-20",
+  "source": "Current working tree; includes uncommitted candidate policies",
+  "inputs": [
+    {
+      "path": "docs/publish/website-redesign-brief.md",
+      "sha256": "1b1a57bdac966be8ae269bdd50debeee4a84a72e44cc91e90c982b6cadaae274"
+    },
+    {
+      "path": "docs/product_plans/00_product_strategy_roadmap.md",
+      "sha256": "a1541cd42837e37b34626170c3425c25aeac4f630e66ea736cf9af18371e4cb8"
+    },
+    {
+      "path": "docs/product_plans/09_membership_tiers_and_entitlements.md",
+      "sha256": "62c90ca670fcd4b6a3eece2aa8f970bd0346b939b3c4c642354c3638b2f448ad"
+    },
+    {
+      "path": "docs/product_plans/11_competitive_intelligence_and_commercial_strategy.md",
+      "sha256": "fc7bb9974aaea44d0a9edaa81ad3ace53892935dd51dc581003a17a92337a7fe"
+    },
+    {
+      "path": "docs/product_plans/34_family_products_development_plan.md",
+      "sha256": "6dede8ca473ba56f0c75a9db621706a2e287a1d953b2d74277b4edbb0e6589a6"
+    },
+    {
+      "path": "docs/product_plans/06_sharing_vault_plan.md",
+      "sha256": "6cd6ecbe55e252aa7198db00e9cdd9d3057ccdadef0b326049ed94c89bbd08af"
+    },
+    {
+      "path": "docs/product_plans/33_password_health_plan.md",
+      "sha256": "aa9ea9d7b5b93f77e781a5b2cc7d2dbc310219404d698a883694882df538fe9f"
+    },
+    {
+      "path": "docs/product_plans/35_local_diagnostics_and_feedback_plan.md",
+      "sha256": "53dd30b32ed3e06504ea4000c4a42f7b850efda2e80f68628af9200caa78b292"
+    },
+    {
+      "path": "docs/ux/README.md",
+      "sha256": "50d896d62be53bcb7236c0c14c4de279bf3d163c70138032c628ee46e41cc469"
+    },
+    {
+      "path": "docs/ux/数据与同步首版/README.md",
+      "sha256": "eb10920db8e1fd84ca3a79b9f82997af00b86cfa2ae5f769b358a9ef0ebb55a5"
+    },
+    {
+      "path": "docs/publish/privacy-and-encryption.md",
+      "sha256": "073ee49900e3822b05ffa4def264fe236d1d102b669837d638b1c7b6dcce4cd1"
+    },
+    {
+      "path": "website/i18n/en.js",
+      "sha256": "486f92e639b2b7c19375b347da8bb4f7a2dbb30362b0bed7b2a62cbfc669a90a"
+    },
+    {
+      "path": "website/i18n/zh.js",
+      "sha256": "a1cef4a9f9d26feb5628c80a55b8566a8ad748b5a7e74a0c72e7c139be5d19a7"
+    },
+    {
+      "path": "website/i18n.js",
+      "sha256": "4d4e6abcfbe516e12e9688ac83f8a4815e4bb401942711e15fb52cffd8e77b92"
+    },
+    {
+      "path": "website/config.js",
+      "sha256": "3f6b6932405da3629aea946e3b8718f9f7898fb300512620c8aee0df7a5bce8b"
+    },
+    {
+      "path": "Projects/SecretBankX/AppReviewMaterials/MARKET_AVAILABILITY_DECISION.md",
+      "sha256": "ba1895abe4670c76b3c0fcb7c6ba3e7302031573381a8fde9745593b3ca110a3"
+    },
+    {
+      "path": "Projects/SecretBankX/SecretBankX/Assets.xcassets/AppIcon.appiconset/icon_256.png",
+      "sha256": "ebd307841b80bceb7b33d192ed3f8e44b3df369773cf425d3a04801a8385ac9c"
+    }
+  ]
+}

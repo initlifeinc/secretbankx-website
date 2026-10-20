@@ -1,0 +1,48 @@
+[
+  {
+    "asset": "assets/app-iphone-home-light.webp",
+    "source": "evidence/native-runtime/app-iphone-home-light.png",
+    "captureSource": "/Users/initlife/Documents/SourceCodeManager/SecretBankX_extracted/output/LB-566-window-size/clean-captures/iphone-home.png",
+    "capturedAt": "2026-10-21",
+    "runtime": "Native iPhone simulator screenshot, populated through normal import with same synthetic Bitwarden fixture as Mac",
+    "scene": "Account homepage; 日常与远行 group and same six accounts as Mac, 苹果账号 first. Chinese, light. No production data.",
+    "originalSHA256": "e1b8fd710c1eb71b675c4d75f3f39c575bcb0029d1b8ddcc4250b702ef90b522",
+    "webpSHA256": "59817172263367e4a508d99224c5b563cb82ca336623bcf1f53f7db53540ab5b",
+    "pixelChanges": "None; lossless WebP verified pixel-identical to native PNG; CSS framing and composition only",
+    "dimensions": [
+      1206,
+      2622
+    ]
+  },
+  {
+    "asset": "assets/app-mac-apple-light.webp",
+    "source": "evidence/native-runtime/app-mac-apple-light.png",
+    "capturedAt": "2026-10-21",
+    "sourceBinary": "/Users/initlife/Documents/SourceCodeManager/SecretBankX_extracted/output/LB-566-window-size/columns/SecretBankX.app/Contents/MacOS/SecretBankX.debug.dylib",
+    "sourceBinarySHA256": "f837013b9b8288e590e71522fdab8e1f94620443f85e9ae383137191e197f135",
+    "originalSHA256": "586c79764727d52fe9cba0a8b31a53452a4d922d4814e26aca73361bfb88f8e0",
+    "webpSHA256": "05f10d0b9228d865e2caef29e4e422ee333c3ce15a5a21888f67a3637bd8e25f",
+    "runtime": "Native macOS app built by SBX development task for LB-566; isolated signed runtime copy; no App source changes by website task",
+    "isolation": "Distinct bundle ID, new team-prefixed App Group, UUID storage scope and keychain namespace; iCloud entitlements removed for offline capture",
+    "scene": "Six synthetic records including 苹果账号, 云端相册, 设计工作室, 家庭网络, 旅途手记, 证件备忘 in 日常与远行. Native homepage and 苹果账号 details. Native traffic-light window controls visible. No drawn replacement controls or generated UI. Passwords masked.",
+    "pixelChanges": "None; lossless WebP with exact transparent RGB preservation; every RGBA channel verified against native PNG. CSS composition only.",
+    "appearance": "light; Chinese; both Mac and iPhone website images use light appearance",
+    "layout": {
+      "observedAccountListWidthPT": 349.5,
+      "sourceMinimumPT": 320,
+      "sourceIdealPT": 350,
+      "sourceMaximumPT": 440,
+      "defaultWindowPT": [
+        1200,
+        820
+      ],
+      "minimumWindowPT": [
+        1080,
+        680
+      ],
+      "developerEvidence": "/Users/initlife/Documents/SourceCodeManager/SecretBankX_extracted/output/LB-566-window-size/columns/checks.json",
+      "pointerDragAcceptance": "not established by developer evidence"
+    },
+    "captureSource": "/Users/initlife/Documents/SourceCodeManager/SecretBankX_extracted/output/LB-566-window-size/clean-captures/mac-restarted.png"
+  }
+]

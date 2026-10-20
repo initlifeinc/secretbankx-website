@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-21",
+  "source": "Signed-in App Store Connect native browser accessibility readbacks; pricing only, no external changes",
+  "localMaterialsChecked": [
+    "docs/publish/website-redesign-brief.md",
+    "output/publish/20261020-china/readback.json",
+    "output/publish/20261020-config/readback-summary.json",
+    "docs/metadata/app_store"
+  ],
+  "localFinding": "No complete currently verified four-product RMB schedule; do not reuse older targets or convert USD.",
+  "CNY": {
+    "personalAnnual": {
+      "price": 22,
+      "url": "https://appstoreconnect.apple.com/apps/6811630816/distribution/subscriptions/6811632689",
+      "readback": "新订阅者的当前订阅定价: 中国大陆 (CNY), ¥22.00"
+    },
+    "personalLifetime": {
+      "price": 68,
+      "url": "https://appstoreconnect.apple.com/apps/6811630816/distribution/iaps/6811638633",
+      "readback": "当前价格: 中国大陆 (CNY), ¥68.00"
+    },
+    "familyAnnual": {
+      "price": 38,
+      "url": "https://appstoreconnect.apple.com/apps/6811630816/distribution/subscriptions/6821312866/pricing",
+      "readback": "当前价格 / 最初价格: 中国大陆 (CNY), ¥38.00"
+    },
+    "familyLifetime": {
+      "price": 198,
+      "url": "https://appstoreconnect.apple.com/apps/6811630816/distribution/iaps/6821313680",
+      "readback": "当前价格 / 172 个国家或地区: 中国大陆 (CNY), ¥198.00"
+    }
+  },
+  "USD_retained": {
+    "personalAnnual": "2.99",
+    "personalLifetime": "9.99",
+    "familyAnnual": "4.99",
+    "familyLifetime": "29.99"
+  },
+  "boundary": "Price configuration does not establish mainland availability, store review, or actual transaction acceptance. Promotional offers are not advertised on website.",
+  "introductoryOfferFollowup": {
+    "checkedAt": "2026-10-21",
+    "authorization": "用户要求中国区价格或推介优惠缺失时补齐，价格参照美国。",
+    "regularPrices": "All four CNY regular prices already existed; unchanged.",
+    "personalAnnual": {
+      "action": "Existing offer retained; user requested additions only when absent",
+      "paymentMode": "payUpFront",
+      "priceCNY": 8,
+      "durationMonths": 6,
+      "startDate": "2026-09-14",
+      "endDate": "2026-12-31",
+      "url": "https://appstoreconnect.apple.com/apps/6811630816/distribution/subscriptions/6811632689/pricing/intro-offers"
+    },
+    "familyAnnual": {
+      "action": "Created mainland China only; confirmed and refreshed readback",
+      "paymentMode": "payUpFront",
+      "priceCNY": 3,
+      "durationMonths": 1,
+      "startDate": "2026-10-21",
+      "endDate": null,
+      "regularRenewalCNY": 38,
+      "regularRenewalPeriod": "year",
+      "reference": {
+        "country": "USA",
+        "priceUSD": "0.29",
+        "durationMonths": 1,
+        "endDate": null
+      },
+      "regionalPriceSelection": "Apple automatic regional calculation from US$0.29 yielded CNY3; final preview showed one region, mainland China only.",
+      "url": "https://appstoreconnect.apple.com/apps/6811630816/distribution/subscriptions/6821312866/pricing/intro-offers",
+      "readback": "2026年10月21日 至 无结束日期; 1 个国家或地区; 中国大陆 (CNY) ¥3.00; 首月提前支付",
+      "existingSevenRegionOffer": "Still present separately with original 2026-10-10 start and no end date."
+    },
+    "boundary": "No changes to regular prices, existing personal offer, other regions, product availability, App Review submission or publication. Website remains undeployed."
+  }
+}
