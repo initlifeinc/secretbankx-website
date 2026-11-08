@@ -9,6 +9,53 @@ PRICES = {
  'zh': {'currency': '¥', 'personal': ('22', '68'), 'family': ('38', '198')},
  'en': {'currency': 'US$', 'personal': ('2.99', '9.99'), 'family': ('4.99', '29.99')},
 }
+REDEMPTION_PAGE = 'redeem.html'
+REDEMPTION = {
+ 'zh': {
+  'title': '兑换高级版权益',
+  'question': '如何兑换免费年付或买断？',
+  'summary': '如果你收到了 SecretBankX 优惠兑换码，请查看适用权益、兑换步骤和沙盒测试说明。',
+  'link': '查看兑换指南',
+  'back': '返回常见问题',
+  'sections': [
+   ('plans', '两种兑换权益', [
+    '免费年付（Premium Yearly）。兑换指定优惠后可免费使用个人高级版一年，优惠到期后自动结束。',
+    '免费买断（Premium Lifetime）。兑换后获得个人高级版买断权益，无需按年续费。',
+   ]),
+   ('app-store', '在 App Store 兑换正式码', [
+    '打开收到的 Apple 兑换链接，或在 iPhone、iPad 上打开 App Store，点按头像，再选择「兑换充值卡或代码」并输入一次性正式码。',
+    '确认页面显示 SecretBankX 和对应权益，再按 Apple 的提示完成兑换。兑换码有适用地区、领取资格和截止日期，请以发放时的说明及 Apple 确认页面为准。',
+    '兑换后打开 SecretBankX 查看高级版状态。如果权益未显示，请确认 App Store 使用的是兑换时的 Apple 账户，再到 App 的高级版页面点按「恢复购买」。',
+   ]),
+   ('sandbox', '使用 Sandbox 测试码', [
+    '如果收到的是 Sandbox 码，请使用测试版本和 Sandbox Apple 账户。在设备的沙盒账户设置中选择「发起交易」→「优惠代码」，输入测试码，再打开 SecretBankX 检查权益。',
+    'Sandbox 兑换只会产生测试交易。年付测试周期可能加速，正式 App Store 账户也不会因此获得正式权益。',
+   ]),
+  ],
+ },
+ 'en': {
+  'title': 'Redeem a Premium offer',
+  'question': 'How do I redeem a free year or lifetime access?',
+  'summary': 'If you received a SecretBankX offer code, see what it unlocks and how to redeem it in the App Store or in Sandbox.',
+  'link': 'Read the redemption guide',
+  'back': 'Back to FAQ',
+  'sections': [
+   ('plans', 'What each offer unlocks', [
+    'Free year (Premium Yearly). This offer gives you one year of Personal Premium at no charge. Access under the offer ends automatically after the year.',
+    'Free lifetime access (Premium Lifetime). Redeeming this offer unlocks Personal Premium as a one-time purchase with no annual renewal.',
+   ]),
+   ('app-store', 'Redeem a live App Store code', [
+    'Open the Apple redemption link you received. You can also redeem a one-time live code on iPhone or iPad by opening the App Store, tapping your profile picture, and choosing Redeem Gift Card or Code.',
+    'Check that Apple shows SecretBankX and the expected offer before confirming. Check the instructions you received and Apple’s confirmation screen for the eligible storefront, account and redemption deadline.',
+    'Open SecretBankX to check your Premium status. If access does not appear, make sure the App Store uses the Apple Account that redeemed the code, then select Restore Purchases on the app’s Premium screen.',
+   ]),
+   ('sandbox', 'Redeem a Sandbox test code', [
+    'Use a test build and a Sandbox Apple Account. In your device’s Sandbox Account settings, select Initiate Transaction, then Offer Codes. Enter the test code and open SecretBankX to check access.',
+    'Sandbox redemption creates a test transaction. The yearly subscription can run on an accelerated schedule, and the transaction does not grant live App Store access.',
+   ]),
+  ],
+ },
+}
 COPY={'zh': {'nav': ['体验', '你的掌控', '方案', '常见问题'],
         'skip': '跳到正文',
         'menu': '打开导航',
@@ -301,9 +348,31 @@ def build(lang):
   desc_class = ' class="family-entitlement"' if family_plan else ""
   prices+=f'<article class="{card_class}"><div class="plan-title"><h3>{name}</h3><span class="limited-price">{c["limitedprice"]}</span></div><p{desc_class}>{desc}</p><div class="amount"><small>{c["yearly"]}</small><div class="billing-price"><strong>{currency}{year}</strong><span>{c["year"]}</span></div></div><div class="lifetime"><span>{c["once"]}</span><b>{currency}{once}</b></div><div class="plan-benefits"><p>{c["includesfree"]}</p><ul>{premium_items}</ul></div></article>'
  faq=''.join(f'<details><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>' for q,a in c['questions'])
+ guide = REDEMPTION[lang]
+ guide_url = url(REDEMPTION_PAGE)
+ faq += (f'<details><summary>{guide["question"]}<span aria-hidden="true">+</span></summary>'
+         f'<p>{guide["summary"]} <a class="textlink" href="{guide_url}">{guide["link"]}</a></p></details>')
  body=f'''<main id="main">{hero}<div class="shell promises">{''.join(f'<span><b aria-hidden="true">✓</b>{r}</span>' for r in c['ribbon'])}<span class="promisenote">{c['badge']}</span></div><section class="shell section" id="experience"><div class="sectionheading"><p class="eyebrow">01 / EVERYDAY ESSENTIALS</p><h2>{c['intro']}</h2><p>{c['introcopy']}</p></div><div class="usegrid">{uses}</div><div class="access"><figure class="accessart semantic-art"><img src="/assets/illustration-migration.svg" width="760" height="620" loading="lazy" alt="{'将重要资料整理进新的文件夹' if lang=='zh' else 'Important documents finding a new home'}"></figure><div><p class="eyebrow">LESS FRICTION</p><h2>{c['access']}</h2><p>{c['accesscopy']}</p><small>{c['accessnote']}</small></div></div></section><section class="control" id="control"><div class="shell controlgrid"><div class="controlcopy"><p class="eyebrow">02 / YOUR DATA, YOUR CHOICE</p><h2>{c['control']}</h2><p>{c['controlcopy']}</p><a class="textlink" href="{url('privacy.html')}">{c['privacy']} ↗</a><div class="mini-vault" aria-hidden="true"><div class="vaultlock">◈</div><span>ENCRYPTED ON DEVICE</span><div class="vaultline"></div><div class="destinations"><span>iCloud</span><span>Files</span><span>WebDAV</span></div></div></div><div class="storage">{storage}<p class="fine">{c['syncnote']}</p></div></div></section><section class="shell recovery"><div><p class="eyebrow">A WAY BACK</p><h2>{c['restoretitle']}</h2><p>{c['restorecopy']}</p></div><ol>{''.join(f'<li><span>{i:02}</span>{s}</li>' for i,s in enumerate(c['restoresteps'],1))}</ol></section><section class="shell sharing"><div><p class="eyebrow">03 / TOGETHER, BY CHOICE</p><h2>{c['share']}</h2><p>{c['sharecopy']}</p><p class="fine">{c['sharenote']}</p></div><figure class="shareart semantic-art"><img src="/assets/illustration-sharing.svg" width="760" height="620" loading="lazy" alt="{'将一份受保护的资料交给指定的人' if lang=='zh' else 'Protected information shared with a chosen person'}"></figure></section><section class="section shell" id="plans"><div class="sectionheading"><p class="eyebrow">04 / SIMPLE CHOICES</p><h2>{c['pricing']}</h2><p>{c['pricingcopy']}</p></div><div class="pricegrid"><article class="pricecard free"><span class="tiny">ESSENTIALS</span><h3>{c['free']}</h3><p>{c['freedesc']}</p><strong class="freeamount">{c['freeprice']}</strong><ul>{''.join(f'<li>{f}</li>' for f in c['freefeatures'])}</ul></article>{prices}</div><p class="fine pricefoot">{c['pricefoot']}</p><div class="expiry"><b>{c['expiry']}</b><p>{c['expirycopy']}</p></div></section><section class="shell faq section" id="faq"><div><p class="eyebrow">GOOD TO KNOW</p><h2>{c['faq']}</h2><a class="textlink" href="mailto:{EMAIL}">{c['support']} ↗</a></div><div>{faq}</div></section><section class="closing"><div class="shell"><img src="/assets/app-icon.png" width="76" height="76" alt="SecretBankX"><p class="eyebrow">{c['status']}</p><h2>{c['closing']}</h2><p>{c['closingcopy']}</p><a class="button primary" href="mailto:{EMAIL}">{c['support']} ↗</a></div></section></main>'''
  out=ROOT/('en' if lang=='en' else '');out.mkdir(exist_ok=True)
  (out/'index.html').write_text(document('重要资料，随时在手' if lang=='zh' else 'Life’s essentials, in your hands',body),encoding='utf-8')
+ guide_toc = ''.join(f'<a href="#{key}">{title}</a>' for key, title, _ in guide['sections'])
+ guide_sections = ''.join(
+  f'<h2 id="{key}">{title}</h2>' + ''.join(f'<p>{paragraph}</p>' for paragraph in paragraphs)
+  for key, title, paragraphs in guide['sections']
+ )
+ apple_docs = 'https://developer.apple.com/documentation/storekit/supporting-offer-codes-in-your-app'
+ apple_label = 'Apple 官方兑换说明' if lang == 'zh' else 'Apple’s offer code documentation'
+ guide_body = (
+  f'<main id="main" class="shell document"><div class="documenthead">'
+  f'<p class="eyebrow">SECRETBANKX / PREMIUM</p><h1>{guide["title"]}</h1><p>{guide["summary"]}</p></div>'
+  f'<div class="documentgrid"><aside class="toc"><b>{c["toc"]}</b>{guide_toc}</aside>'
+  f'<article class="documentbody">{guide_sections}'
+  f'<p><a href="{apple_docs}">{apple_label}</a></p>'
+  f'<p><a href="{url()}#faq">{guide["back"]}</a></p></article></div></main>'
+ )
+ (out/REDEMPTION_PAGE).write_text(
+  document(guide['title'], guide_body, REDEMPTION_PAGE, guide['summary']), encoding='utf-8'
+ )
  # Migrate every candidate policy section in its original order; interpolate only verified brand/contact values.
  policies=json.loads((ROOT/'i18n'/f'{lang}.json').read_text())
  for page in ['privacy','terms']:
